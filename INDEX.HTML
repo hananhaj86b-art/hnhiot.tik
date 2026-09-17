@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריך מהיר - מערכת תיק מדריך</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Heebo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: #ffffff !important; padding: 0 !important; }
+            .print-card { box-shadow: none !important; border: 1px solid #cbd5e1 !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen py-4 sm:py-8 px-3 sm:px-6">
+
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-xl print-card overflow-hidden border border-slate-200">
+        
+        <!-- Top Quick Bar -->
+        <div class="no-print bg-slate-900 text-white px-5 py-3 flex justify-between items-center text-xs sm:text-sm">
+            <span class="font-bold text-teal-400 flex items-center gap-2">
+                <i class="fa-solid fa-bolt"></i> מדריך מהיר למדריך/ה
+            </span>
+            <div class="flex items-center gap-2">
+                <button onclick="navigator.clipboard.writeText('https://hananhaj86b-art.github.io/tik-madrich/'); alert('הקישור הועתק!');" class="bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 transition flex items-center gap-1.5 text-xs">
+                    <i class="fa-regular fa-copy"></i> העתק קישור
+                </button>
+                <button onclick="window.print()" class="bg-teal-600 hover:bg-teal-500 font-bold px-3.5 py-1.5 rounded-lg transition flex items-center gap-1.5 text-xs shadow">
+                    <i class="fa-solid fa-print"></i> הדפס / PDF
+                </button>
+            </div>
+        </div>
+
+        <!-- Punchy Header -->
+        <div class="bg-gradient-to-r from-teal-800 via-teal-900 to-slate-900 text-white p-6 sm:p-8 relative">
+            <div class="relative z-10 space-y-2">
+                <div class="inline-block bg-teal-500/20 text-teal-300 text-xs font-bold px-3 py-1 rounded-full border border-teal-400/20">
+                    ⚡ הכל במקום אחד בקלות
+                </div>
+                <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight">
+                    מערכת <span class="text-teal-400">"תיק מדריך"</span>
+                </h1>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-light">
+                    כלי דיגיטלי בענן לניהול, תיעוד ומעקב אחר הדרכה בבתי ספר – בזמן אמת, ביעילות ובסנכרון מלא עם הנהלת ביה"ס וצוות העברית.
+                </p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="p-5 sm:p-8 space-y-8">
+
+            <!-- 1. Tabs Overview (Compact Cards) -->
+            <div>
+                <h2 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-teal-600"></i> מה כוללת המערכת? (לשוניות ראשיות)
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 hover:border-teal-400 transition">
+                        <div class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-1">
+                            <span class="w-6 h-6 rounded-lg bg-teal-600 text-white flex items-center justify-center text-xs"><i class="fa-solid fa-school"></i></span>
+                            בתי הספר שלי
+                        </div>
+                        <p class="text-xs text-slate-600">ניהול פרטי מוסד, תיעוד מפגשים, צירוף קבצים וסיכום שנתי ב-AI.</p>
+                    </div>
+
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 hover:border-teal-400 transition">
+                        <div class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-1">
+                            <span class="w-6 h-6 rounded-lg bg-blue-600 text-white flex items-center justify-center text-xs"><i class="fa-solid fa-chart-pie"></i></span>
+                            דשבורד
+                        </div>
+                        <p class="text-xs text-slate-600">תצוגה ויזואלית של סיכום שעות, כמות מפגשים ומשימות פתוחות.</p>
+                    </div>
+
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 hover:border-teal-400 transition">
+                        <div class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-1">
+                            <span class="w-6 h-6 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-xs"><i class="fa-solid fa-list-check"></i></span>
+                            משימות ותזכורות
+                        </div>
+                        <p class="text-xs text-slate-600">ניהול ומעקב אחר יעדים פדגוגיים לכל בית ספר.</p>
+                    </div>
+
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 hover:border-teal-400 transition">
+                        <div class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-1">
+                            <span class="w-6 h-6 rounded-lg bg-purple-600 text-white flex items-center justify-center text-xs"><i class="fa-solid fa-file-export"></i></span>
+                            דוחות וייצוא
+                        </div>
+                        <p class="text-xs text-slate-600">הפקת דוחות מרוכזים לפי תאריכים והדפסה/שמירה כ-PDF.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Step-by-Step Guide -->
+            <div>
+                <h2 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2 border-t pt-6 border-slate-100">
+                    <i class="fa-solid fa-circle-play text-teal-600"></i> איך עובדים? (ב-4 צעדים פשוטים)
+                </h2>
+
+                <div class="space-y-3">
+                    
+                    <!-- Step 1 -->
+                    <div class="flex items-start gap-3 p-3.5 bg-white border border-slate-200 rounded-xl shadow-2xs">
+                        <span class="w-7 h-7 rounded-full bg-teal-700 text-white font-black text-xs flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+                        <div class="text-xs sm:text-sm">
+                            <strong class="text-slate-900 block font-bold mb-0.5">הרשמה וכניסה:</strong>
+                            פותחים את הקישור <a href="https://hananhaj86b-art.github.io/tik-madrich/" target="_blank" class="text-teal-700 font-bold underline">https://hananhaj86b-art.github.io/tik-madrich/</a>. בלשונית <strong>"הרשמה חדשה"</strong> מזינים שם, מייל וסיסמה (בפעמים הבאות מתחברים דרך "התחברות").
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-start gap-3 p-3.5 bg-white border border-slate-200 rounded-xl shadow-2xs">
+                        <span class="w-7 h-7 rounded-full bg-teal-700 text-white font-black text-xs flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+                        <div class="text-xs sm:text-sm">
+                            <strong class="text-slate-900 block font-bold mb-0.5">הקמת בית ספר:</strong>
+                            בלשונית "בתי הספר שלי" לוחצים <span class="text-teal-800 font-bold bg-teal-50 px-1.5 py-0.5 rounded border border-teal-200">+ הוסף בית ספר</span>.
+                            <br><span class="text-amber-700 font-bold">💡 חשוב:</span> הקפידו להזין מייל מנהל/ת ורכז/ת עברית – לשליחת סיכומים בלחיצה!
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-start gap-3 p-3.5 bg-white border border-slate-200 rounded-xl shadow-2xs">
+                        <span class="w-7 h-7 rounded-full bg-teal-700 text-white font-black text-xs flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+                        <div class="text-xs sm:text-sm">
+                            <strong class="text-slate-900 block font-bold mb-0.5">תיעוד מפגש:</strong>
+                            לוחצים "פתח תיק בית ספר" ➔ "+ תיעוד מפגש جديد". מזינים כותרת, שעות, הישגים והמלצות (ניתן להסתייע ב-AI) ➔ לוחצים <strong>שמור בענן</strong>.
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="p-4 bg-teal-50/60 border border-teal-200 rounded-xl space-y-2.5">
+                        <div class="flex items-start gap-3">
+                            <span class="w-7 h-7 rounded-full bg-teal-700 text-white font-black text-xs flex items-center justify-center flex-shrink-0 mt-0.5">4</span>
+                            <div class="text-xs sm:text-sm">
+                                <strong class="text-slate-900 block font-bold mb-0.5">שליחת סיכום במייל:</strong>
+                                לוחצים על <span class="text-blue-700 font-bold bg-blue-100/80 px-2 py-0.5 rounded"><i class="fa-regular fa-paper-plane"></i> שלח סיכום בדוא"ל</span> בתחתית הטופס. כתובות המנהל והרכז יתמלאו אוטומטית.
+                            </div>
+                        </div>
+
+                        <!-- Important Callout Highlight -->
+                        <div class="bg-amber-100/90 border-r-4 border-amber-500 p-3 rounded-lg text-xs text-amber-950 flex items-start gap-2.5 shadow-xs">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-600 text-base mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <strong class="font-extrabold text-amber-900">דגש חשוב לגבי תוכן ארוך:</strong>
+                                בלחיצה על שליחה, כל תוכן הסיכום מועתק **אוטומטית** ללוח (Clipboard). אם המייל שנפתח מציג טקסט חלקי – פשוט מחקו אותו והדביקו (<kbd class="bg-white border px-1 rounded font-mono font-bold">Ctrl+V</kbd> / <kbd class="bg-white border px-1 rounded font-mono font-bold">Cmd+V</kbd>) את התוכן המלא!
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 3. Important Notes -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
+                <div class="p-3 bg-slate-100/80 rounded-xl border border-slate-200 flex items-center gap-2.5">
+                    <i class="fa-solid fa-shield-halved text-teal-600 text-lg flex-shrink-0"></i>
+                    <div>
+                        <strong>גישה ופרטיות:</strong> הנתונים נשמרים בענן לפי המייל שלך. הגישה דיסקרטית מכל מכשיר.
+                    </div>
+                </div>
+                <div class="p-3 bg-slate-100/80 rounded-xl border border-slate-200 flex items-center gap-2.5">
+                    <i class="fa-solid fa-right-from-bracket text-amber-600 text-lg flex-shrink-0"></i>
+                    <div>
+                        <strong>מחשב משותף:</strong> בסיום העבודה יש ללחוץ על <em>"התנתק"</em> בראש המסך.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer / Developer Info -->
+        <footer class="bg-slate-900 text-white p-5 sm:p-6 border-t border-slate-800">
+            <div class="flex flex-row items-center justify-between gap-4">
+                
+                <div class="flex items-center gap-3.5">
+                    <img src="https://www.dropbox.com/scl/fi/n99ekuziwuwo0gw6ayyz4/1c81ae1c-2456-410c-999a-36e725a9728b.png?rlkey=63ta8ngn55sdabt6mfdbyt10z&raw=1" 
+                         alt="לוגו המערכת" 
+                         class="w-14 h-14 object-contain bg-slate-950 p-2 rounded-xl border border-slate-800 shadow"
+                         onerror="this.src='https://via.placeholder.com/60?text=תיק+מדריך'">
+                    <div>
+                        <div class="text-[10px] text-teal-400 font-bold uppercase tracking-wider">
+                            פיתוח ועיצוב המערכת
+                        </div>
+                        <div class="text-lg font-black text-white tracking-tight">
+                            חנאן חאג' מוחמד
+                        </div>
+                        <p class="text-[11px] text-slate-400">
+                            יוצר ומפתח אפליקציית "תיק מדריך" ©
+                        </p>
+                    </div>
+                </div>
+
+                <div class="no-print">
+                    <a href="https://hananhaj86b-art.github.io/tik-madrich/" 
+                       target="_blank" 
+                       class="bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition inline-flex items-center gap-1.5 shadow">
+                        <span>למערכת</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
